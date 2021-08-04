@@ -1,0 +1,185 @@
+.container-hero {
+  @extend .img-cover;
+  position: relative;
+  min-height: 42rem;
+  padding-top: 3rem;
+  background: $secondary;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 1000px rgba(#152033, 0.7);
+  &.container-hero-video {
+    background: transparent;
+    overflow: hidden;
+  }
+  &.container-hero-video-home {
+    h1 {
+      margin-top: 4rem;
+      font-size: 3.9rem;
+      font-weight: 900;
+      line-height: 4.1rem;
+    }
+    h2 {
+      font-size: 1.28rem;
+      font-weight: 300;
+      color: #ccc;
+      padding: 0 15%;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      line-height: 1.7rem;
+      b {
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+  }
+  video {
+    position: absolute;
+    z-index: -1;
+    min-width: 100%;
+    box-shadow: inset 0 0 0 1000px rgba(#152033, 0.7);
+  }
+  h1 {
+    @extend .title-2;
+    color: #fff;
+    line-height: 3.5rem;
+    letter-spacing: 0.02rem;
+    font-weight: 300;
+    b {
+      font-weight: 900;
+    }
+    &.hero-text-lg {
+      font-size: 3.8rem;
+      line-height: 4.2rem;
+      letter-spacing: 0.01rem;
+    }
+  }
+  .sup {
+    font-size: 1.35rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: $brand-primary;
+    &.sup-red {
+      color: $red;
+    }
+    &.sup-orange {
+      color: #ff9c1b;
+    }
+  }
+  &.container-hero-sm {
+    min-height: 18rem;
+    padding-top: 4.5rem;
+    box-shadow: inset 0 0 0 1000px rgba(#25365d, 0.5);
+    h1 {
+      @extend .title-2;
+      color: #fff;
+      line-height: 3.5rem;
+      letter-spacing: 0.02rem;
+    }
+  }
+  &.hero-careers {
+    min-height: 29rem;
+    h1 {
+      color: #fff;
+    }
+  }
+  &.hero-demo {
+    background: $secondary url('../images/demo/hero.png');
+    position: relative;
+    &:after {
+      content: '\2193';
+      padding-top: 0.9rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 1.6rem;
+      position: absolute;
+      z-index: 2;
+      bottom: -1.6rem;
+      left: 50%;
+      margin-left: -1.6rem;
+      background: $brand-primary;
+    }
+  }
+  &.hero-about {
+    background: $secondary url('../images/about/hero.png');
+  }
+  &.hero-contact {
+    background: $secondary url('../images/contact/hero.png');
+  }
+  &.hero-dcim {
+    background: $secondary url('../images/dcim/hero.png');
+  }
+  &.hero-access-control {
+    background: $secondary url('../images/access_control/hero.jpg');
+    box-shadow: inset 0 0 0 1000px rgba(#0f1625, 0.7);
+  }
+  &.hero-careers {
+    background: url('../images/careers/hero.png');
+    box-shadow: none;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .container-hero {
+    padding-top: 7rem;
+    min-height: 40rem;
+    padding-bottom: 5rem;
+    h1 {
+      text-align: center;
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      &.hero-text-lg {
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+    }
+    .sup {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 1.6rem;
+    }
+    &.container-hero-sm {
+      padding-top: 8rem;
+      padding-bottom: 6rem;
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
+      h1 {
+        font-size: 1.5rem;
+        line-height: 2.35rem;
+      }
+    }
+    &.hero-contact.container-hero-sm {
+      background: $secondary url('../images/contact/hero-m.png');
+    }
+    &.container-hero-video-home {
+      .btn-cta {
+        font-size: 1rem;
+        margin-bottom: 1.3rem;
+      }
+      h1 {
+        margin-top: 0rem;
+        font-size: 2.6rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        line-height: 2.85rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+        font-weight: 300;
+        color: #ccc;
+        padding: 0;
+        margin-top: 1.6rem;
+        margin-bottom: 0rem;
+        line-height: 1.7rem;
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
+        b {
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

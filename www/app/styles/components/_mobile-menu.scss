@@ -1,0 +1,68 @@
+.overlay-mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 100000;
+
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+
+  &.closed {
+    right: -100%;
+  }
+
+  .overlay-close {
+    cursor: pointer;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.3rem;
+    background: url('../images/icons/icon-close.svg');
+    background-size: 1.1rem;
+    background-repeat: no-repeat;
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .menu-logo {
+    margin-top: 1.2rem;
+    margin-left: 2.5rem;
+  }
+
+  .container-mobile-menu {
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+    .btn {
+      font-size: 1rem;
+    }
+  }
+
+  .list-menu {
+    text-transform: uppercase;
+    li {
+      padding: 0.8rem 0;
+      a {
+        color: #25365d;
+        font-size: 1.2rem;
+        letter-spacing: 0.04rem;
+        font-weight: 500;
+        &:hover {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+
+  .follow {
+    font-size: 0.9rem;
+    margin-top: 2.5rem;
+    a {
+      color: #a1a6af;
+      margin-right: 0.3rem;
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+}

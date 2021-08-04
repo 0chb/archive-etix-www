@@ -1,0 +1,53 @@
+$slick-dot-color: $secondary !default;
+$slick-dot-size: 0.6rem !default;
+
+/* overrides */
+
+$slick-font-family: none !default;
+@import 'node_modules/slick-carousel/slick/slick-theme.scss';
+
+.slick-list {
+  .slick-loading & {
+    background-image: none;
+  }
+}
+
+.slick-dots li button:before {
+  font-size: 1.3rem !important;
+}
+
+/* end overrides */
+.slick-float-right {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+
+  .slick-dots {
+    bottom: 0;
+  }
+
+  .card {
+    width: 24rem;
+    margin-right: 1rem;
+    padding: 2.5rem;
+    font-size: 1.3rem;
+    color: #25365d;
+
+    b {
+      font-weight: 900;
+    }
+
+    .card-text {
+      min-height: 10rem;
+      line-height: 1.9rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .slick-float-right {
+    .card {
+      padding: 3.6rem 2.2rem;
+      font-size: 1.4rem;
+    }
+  }
+}

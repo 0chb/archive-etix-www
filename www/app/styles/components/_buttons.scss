@@ -1,0 +1,47 @@
+.btn {
+  cursor: pointer;
+  font-size: 0.8rem;
+  &.btn-sm {
+    font-size: 0.75rem;
+  }
+  &.btn-lg {
+    font-size: 0.9rem;
+  }
+}
+
+.btn-warning {
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.btn-white {
+  background: #fff;
+  color: #25365d;
+}
+
+.btn-primary {
+  border: 0;
+  &:hover {
+    box-shadow: 0 8px 20px rgba(#0086ff, 0.3);
+    background: lighten($brand-primary, 3%);
+  }
+}
+
+.btn-transparent-dark {
+  background: rgba(#000, 0.19);
+  color: #fff;
+
+  &:hover {
+    background: rgba(#000, 0.26);
+    color: #fff;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .btn:not(.btn-sm) {
+    font-size: 1rem;
+    padding: 1.1rem 2.8rem;
+  }
+}

@@ -1,0 +1,16 @@
+.list-group-item:first-child {
+  border-radius: 0.4rem;
+}
+
+.list-careers-item {
+  .list-careers-positions {
+    flex-direction: column;
+    p {
+      color: $secondary;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {}

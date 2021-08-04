@@ -1,0 +1,28 @@
+.container-grid {
+  .col-no-p {
+    padding: 0;
+  }
+
+  .container-grid-content {
+    padding: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .img-grid {
+    @extend .img-cover;
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 25rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .container-grid {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .container-grid-content {
+      padding: 1rem 1rem;
+    }
+  }
+}

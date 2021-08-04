@@ -1,0 +1,173 @@
+$dot-size: 6px;
+$dot-size-out: 16px;
+$color-dot-default: rgba(#a1a6af, 0.4);
+$color-dot-active: rgba(#000, 0.2);
+$color-active: lighten($brand-primary, 10%);
+$dot-out-padding: 5px;
+
+.nav-fixed-left {
+  position: fixed;
+  left: 2rem;
+  height: 11rem;
+  top: 50%;
+  margin-top: -5.5rem;
+  z-index: 10;
+
+  /* active white state */
+  &.dots-white {
+    .nav-dots {
+      .nav-link {
+        .dot {
+          background: $color-dot-active;
+        }
+
+        &:hover {
+          color: rgba(#fff, 0.8);
+
+          .dot {
+            background: #fff;
+            &:before {
+              border: 1px solid #fff;
+            }
+          }
+        }
+
+        &.active {
+          color: #fff;
+          .dot {
+            background: #fff;
+
+            &:before {
+              border: 1px solid #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* active hero state */
+  &.dots-hero {
+    .nav-dots {
+      .nav-link {
+        color: #fff;
+
+        .dot {
+          //background: rgba(#A1A6AF, 0.4);
+        }
+
+        &:hover {
+          color: #a1a6af;
+
+          .dot {
+            background: #fff;
+            &:before {
+              border: 1px solid #fff;
+            }
+          }
+        }
+
+        &.active {
+          .dot {
+            //background: #FFF;
+
+            &:before {
+              //border: 1px solid #FFF;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* DEFAULT STATE */
+.nav-dots {
+  font-size: 0.8rem;
+  li {
+    padding: 0;
+  }
+
+  .nav-link {
+    padding: 0.15rem 0;
+    color: $color-dot-default;
+
+    .nav-label {
+      opacity: 0;
+    }
+
+    .dot {
+      width: $dot-size;
+      height: $dot-size;
+      border-radius: $dot-size/2;
+      background: $color-dot-default;
+      position: relative;
+      display: inline-block;
+      margin-right: 0.4rem;
+      vertical-align: middle;
+      margin-bottom: 0.1rem;
+      transition: background 0.2s ease-in-out;
+
+      &:before {
+        display: none;
+        content: ' ';
+        position: absolute;
+        z-index: -1;
+        top: -$dot-out-padding;
+        left: -$dot-out-padding;
+        width: $dot-size-out;
+        height: $dot-size-out;
+        border-radius: $dot-size-out/2;
+        background: transparent;
+        border: 1px solid $color-dot-default;
+      }
+    }
+
+    //active
+    &.active {
+      color: $secondary;
+
+      .nav-label {
+        opacity: 1;
+      }
+
+      .dot {
+        background: $color-active;
+
+        &:before {
+          display: block;
+        }
+
+        &:before {
+          border: 1px solid $color-active;
+        }
+      }
+    }
+
+    //hover
+    &:hover {
+      color: rgba($secondary, 0.8);
+
+      .nav-label {
+        opacity: 1;
+      }
+
+      .dot {
+        background: rgba(#000, 0.4);
+        &:before {
+          display: block;
+        }
+
+        &:before {
+          border: 1px solid rgba(#000, 0.4);
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .nav-fixed-left {
+    display: none;
+  }
+}

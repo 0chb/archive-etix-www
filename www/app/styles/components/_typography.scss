@@ -1,0 +1,232 @@
+.seconday {
+  color: #25365d;
+}
+
+.text-transparent {
+  opacity: 0.7;
+}
+
+.title-sub {
+  color: $brand-primary;
+  font-weight: 200;
+  font-size: 1.6rem;
+  &.red {
+    color: $red;
+  }
+  &.orange {
+    color: #ff9c1b;
+  }
+}
+
+.title-1,
+.title-2,
+.title-3,
+.title-5,
+.title-6 {
+  font-weight: 900;
+  letter-spacing: -0.1rem;
+  font-size: 3.1rem;
+  line-height: 3rem;
+  &.title-cap {
+    position: relative;
+    padding-top: 2.5rem;
+    &:after {
+      content: ' .';
+      color: #ffffff;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      top: -2.1rem;
+      position: absolute;
+      left: 0.7rem;
+      width: 5rem;
+      z-index: -1;
+    }
+    &:before {
+      content: '.';
+      font-size: 2.3rem;
+      color: $brand-primary;
+      top: -1.13rem;
+      position: absolute;
+      left: 0rem;
+      z-index: 1;
+    }
+  }
+}
+
+.title-2 {
+  font-weight: 900;
+  letter-spacing: -0.1rem;
+  font-size: 2.76rem;
+  line-height: 3rem;
+}
+
+.title-3 {
+  font-size: 1.67rem;
+  margin: 0;
+  letter-spacing: 0rem;
+  line-height: 1.95rem;
+  &.sub {
+    font-weight: 200;
+  }
+  &.b-xl {
+    display: inline-flex;
+    span {
+      display: flex;
+      color: $brand-primary;
+      font-size: 3rem;
+      letter-spacing: -0.05rem;
+      font-weight: 200;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.title-4 {
+  font-size: 1.57rem;
+  margin: 0;
+  letter-spacing: 0rem;
+}
+
+.title-5 {
+  font-size: 1.3rem;
+  margin: 0;
+  letter-spacing: 0rem;
+  line-height: 1.9rem;
+  &.sub {
+    font-weight: 200;
+  }
+}
+
+.title-6 {
+  font-size: 0.85rem;
+  letter-spacing: 0rem;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.1rem;
+}
+
+.text-1 {
+  //color: #24355E;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.text-2 {
+  font-size: 0.9rem;
+  font-weight: 200;
+  letter-spacing: 0.01rem;
+  line-height: 1.6rem;
+}
+
+.text-3 {
+  font-size: 0.84rem;
+  font-weight: 200;
+}
+
+.text-faded {
+  color: #686c73;
+}
+
+.text-thin {
+  font-weight: 300;
+}
+
+.text-sm-primary {
+  color: $blue;
+  font-size: 0.85rem;
+}
+
+.img-block-middle {
+  min-height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-item-dot {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.dot-red {
+  content: '.';
+  font-size: 2.3rem;
+  color: #e0053b;
+  top: -0.5rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.dot-red-right {
+  &:before {
+    @extend .dot-red;
+    right: -1.28rem;
+  }
+  &.dot-middle:before {
+    top: 1.5rem;
+  }
+}
+
+.dot-red-left {
+  &:before {
+    @extend .dot-red;
+    left: -1.25rem;
+  }
+  &.dot-middle:before {
+    top: 1.5rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .title-1 {
+    font-size: 2.7rem;
+    line-height: 2.9rem;
+  }
+  .title-2 {
+    font-size: 2.65rem;
+  }
+  .title-3 {
+    font-size: 1.67rem;
+    margin: 0;
+    letter-spacing: 0rem;
+    line-height: 1.95rem;
+    &.b-xl {
+      display: block;
+      span {
+        font-size: 2rem;
+        display: block;
+        letter-spacing: -0.05rem;
+        font-weight: 200;
+        margin-top: 1rem;
+      }
+    }
+  }
+  .title-4 {
+    font-size: 1.8rem;
+  }
+  .title-5 {
+    font-size: 1.65rem;
+    &.sub {
+      font-size: 1.4rem;
+      margin-top: 0.5rem;
+    }
+  }
+  .title-6 {
+    font-size: 1.15rem;
+  }
+  .text-3 {
+    font-size: 0.95rem;
+  }
+  .text-1 {
+    font-size: 1.1rem;
+  }
+  .text-2 {
+    font-size: 0.97rem;
+    line-height: 1.9rem;
+  }
+  .dot-red-right {
+    &:before {
+      left: -1.28rem;
+    }
+  }
+}

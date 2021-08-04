@@ -1,0 +1,32 @@
+.container-dcim-1 {
+  padding-top: 9rem;
+  padding-bottom: 10rem;
+  h1 {
+    color: $brand-primary;
+    font-size: 3.8rem;
+    letter-spacing: -0.05rem;
+    b {
+      font-weight: 900;
+    }
+  }
+}
+
+.img-real-time {
+  margin-top: -3rem;
+}
+
+@include media-breakpoint-down(md) {
+  .container-dcim-1 {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    h1 {
+      color: $brand-primary;
+      font-size: 1.9rem;
+      letter-spacing: -0.03rem;
+      line-height: 2.6rem;
+    }
+  }
+  .img-real-time {
+    margin-top: 0;
+  }
+}

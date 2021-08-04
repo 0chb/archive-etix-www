@@ -1,0 +1,98 @@
+@import 'fonts';
+@import 'variables';
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+// bower:scss
+@import 'node_modules/slick-carousel/slick/slick.scss';
+// endbower
+@import 'components/typography';
+@import 'components/navbar';
+@import 'components/nav-scroll';
+@import 'components/buttons';
+@import 'components/footer';
+@import 'components/mobile-menu';
+@import 'components/container-boxes-hover';
+@import 'components/container-tabs';
+@import 'components/containers-backgrounds';
+@import 'components/container-grid';
+@import 'components/social-bottom';
+@import 'components/container-nav-pills';
+@import 'components/container-request-demo';
+@import 'components/layout-lines';
+@import 'components/container-hero';
+@import 'components/container-contact';
+@import 'components/container-demo';
+@import 'components/list-videos';
+@import 'components/list-careers';
+/* pages */
+
+@import 'pages/about';
+@import 'pages/dcim';
+@import 'pages/cctv';
+@import 'pages/access';
+/* plugins */
+
+@import 'plugins/modal-video';
+@import 'plugins/slick';
+@import 'plugins/slick-months';
+body {
+  padding-top: 0;
+  position: relative;
+  color: #25365d;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.img-full {
+  width: 100%;
+}
+
+.bg-faded {
+  background: #f2f5fa;
+}
+
+.img-cover {
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+}
+
+.bg-danger-arrow-after {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $red;
+    clear: both;
+  }
+}
+
+.img-push-top {
+  margin-top: -3rem;
+}
+
+@include media-breakpoint-down(lg) {
+  .img-push-top {
+    margin-top: -1rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .img-push-top {
+    margin-top: 0rem;
+  }
+  .px-md-0 {
+    padding: 0;
+  }
+  .py-md-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}

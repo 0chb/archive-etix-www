@@ -1,0 +1,58 @@
+.container-tabs {
+  color: #fff;
+  position: relative;
+  height: 36.5rem;
+  overflow: hidden;
+
+  .tab-pane {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .tab-title {
+    @extend .title-1;
+    color: #fff;
+    font-size: 3.1rem;
+    letter-spacing: -0.08rem;
+    line-height: 3.3rem;
+    margin-top: 2.5rem;
+  }
+
+  .tab-mobile-label {
+    color: rgba(#000, 0.3);
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+
+  .slick-dots {
+    bottom: 0rem;
+    li.slick-active button:before {
+      color: #fff;
+      opacity: 1;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .container-tabs {
+    padding: 0 1rem;
+    height: auto;
+    overflow: auto;
+
+    .tab-pane {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .tab-title {
+      font-size: 2.7rem;
+      letter-spacing: -0.08rem;
+      line-height: 3rem;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      text-align: center;
+    }
+  }
+}

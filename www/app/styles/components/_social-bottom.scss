@@ -1,0 +1,57 @@
+.overlay-container-bottom-social {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0.3rem;
+  width: 100%;
+  text-align: right;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  z-index: 2;
+
+  .follow {
+    color: #fff;
+    font-size: 0.78rem;
+    span {
+      margin-left: 0.3rem;
+    }
+    a {
+      color: #a1a6af;
+      margin: 0 0.3rem;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .hiring {
+    display: none; //TEMP
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .overlay-container-bottom-social {
+    p {
+      display: inline-block;
+      .btn {
+        font-size: 0.9rem;
+      }
+    }
+
+    .hiring {
+      float: left;
+    }
+
+    .follow {
+      float: right;
+      font-size: 0.9rem;
+      span {
+        display: none;
+      }
+      a {
+        margin: 0 0.3rem;
+      }
+    }
+  }
+}

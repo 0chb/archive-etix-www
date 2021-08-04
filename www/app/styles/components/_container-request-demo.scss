@@ -1,0 +1,70 @@
+.container-request-demo {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  position: relative;
+  h2 {
+    @extend .title-2;
+    color: #fff;
+    font-weight: 300;
+    line-height: 3.15rem;
+    b {
+      font-weight: 900;
+    }
+  }
+  .sub {
+    padding-top: 1.35rem;
+    padding-bottom: 1.2rem;
+    font-size: 1.1rem;
+    letter-spacing: -0.01rem;
+    color: #ccc;
+  }
+  .radio-request-toggle {
+    .btn {
+      cursor: pointer;
+      background: #19294b;
+      border-radius: 0.4rem;
+      text-align: left;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      height: 4.1em;
+      line-height: 1.25rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.1rem;
+      font-weight: 300;
+      i {
+        @extend .ml-auto;
+        width: 22px;
+        height: 22px;
+        border: 2px solid #25365d;
+        border-radius: 11px;
+      }
+      &.active {
+        i {
+          border-color: $brand-primary;
+          background: $brand-primary;
+          position: relative;
+          &:after {
+            content: ' ';
+            position: absolute;
+            top: 4px;
+            left: 2px;
+            background: url(../images/icons/icon-check.svg) no-repeat;
+            width: 13px;
+            height: 10px;
+          }
+        }
+      }
+      input {
+        display: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .container-request-demo {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
